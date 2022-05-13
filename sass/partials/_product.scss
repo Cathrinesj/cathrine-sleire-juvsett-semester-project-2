@@ -1,7 +1,0 @@
-.button--cart::before {
-content: "Add to cart";
-}
-
-.button--cart.added::before {
-    content: "Remove";
-}

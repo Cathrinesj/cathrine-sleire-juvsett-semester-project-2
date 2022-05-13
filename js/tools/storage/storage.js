@@ -1,5 +1,6 @@
 const tokenKey = "token";
 const userKey = "user";
+const favouritKey = "cart";
 
 export function savetoken(token) {
   saveToStorage(tokenKey, token);
@@ -45,12 +46,16 @@ function getFromStorage(key) {
   return JSON.parse(value);
 }
 
-export function getExistingCart() {
-  const cart = localStorage.getItem("addedToCart");
+export function getCart() {
+  const inCart = localStorage.getItem(favouritKey);
 
-  if (cart === null) {
+  if (!inCart) {
     return [];
   } else {
-    return JSON.parse(cart);
+    return JSON.parse(inCart);
   }
+}
+
+export function saveCart(inCart) {
+  localStorage.setItem(favouritKey, JSON.stringify(inCart));
 }

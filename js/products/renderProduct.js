@@ -1,7 +1,7 @@
-import { getExistingCart, getUsername } from "../tools/storage/storage.js";
+import { getCart, getUsername } from "../tools/storage/storage.js";
 
 export function renderProduct(product) {
-  const inCart = getExistingCart();
+  const inCart = getCart();
 
   const productContainer = document.querySelector(".product");
 
@@ -29,13 +29,13 @@ export function renderProduct(product) {
 
   productContainer.innerHTML += `<div class="product__item">
                                                 <div> 
-                                                
+                                                <img src="${product.image.formats.small.url}"/>
                                                 </div
                                                 <div>
                                                 <h3>${product.title}</h3>
                                                 <h4>${product.price}</h4>
                                                 <p>${product.description}</p>
-                                                <button class="button--cart ${cartClass}" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}"></button>
+                                                <button class="product__button--cart ${cartClass}" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="${product.image.formats.small.url}"></button>
                                                 ${loggedIn}
                                                 </div> 
                                                 `;

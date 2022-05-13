@@ -1,7 +1,9 @@
-import { getExistingCart } from "../../tools/storage/storage.js";
+import { getCart, saveCart } from "../../tools/storage/storage.js";
 
-export function toggleCart() {
-  const cartButton = document.querySelector(".product__item button--cart");
+export default function toggleCart() {
+  const cartButton = document.querySelector(
+    ".product__item .product__button--cart"
+  );
 
   cartButton.addEventListener("click", handleClick);
 
@@ -12,7 +14,7 @@ export function toggleCart() {
     const title = this.dataset.title;
     const price = this.dataset.price;
 
-    const currentCart = getExistingCart();
+    const currentCart = getCart();
     const productExist = currentCart.find(function (product) {
       return product.id === id;
     });
@@ -20,14 +22,10 @@ export function toggleCart() {
     if (productExist === undefined) {
       const cart = { id: id, title: title, price: price };
       currentCart.push(cart);
-      saveFavs(currentCart);
+      saveCart(currentCart);
     } else {
       const newCart = currentCart.filter((cart) => cart.id !== id);
-      saveFavs(newCart);
+      saveCart(newCart);
     }
-  }
-
-  function saveFavs(cart) {
-    localStorage.setItem("addedToCart", JSON.stringify(cart));
   }
 }
