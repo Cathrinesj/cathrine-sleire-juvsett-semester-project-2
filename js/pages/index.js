@@ -16,10 +16,13 @@ async function getFeaturedProducts() {
 
     featuredContainer.innerHTML = "";
 
+    console.log(products);
+
     products.forEach(function (featured) {
+      console.log(featured.image.formats.small.url);
       if (featured.featured === true) {
         featuredContainer.innerHTML += `<div class="featured">
-                                          <img src=${featured.image.url}/>
+                                          <img src="${featured.image.formats.small.url}"/>
                                           <a href="product.html?id=${featured.id}" class="featured__button">
                                           <h3>${featured.title}</h3>
                                           </a>

@@ -2,16 +2,30 @@ const tokenKey = "token";
 const userKey = "user";
 const favouritKey = "cart";
 
+function saveToStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
 export function savetoken(token) {
   saveToStorage(tokenKey, token);
 }
 
-export function getToken() {
-  return getFromStorage(tokenKey);
-}
-
 export function saveUser(user) {
   saveToStorage(userKey, user);
+}
+
+function getFromStorage(key) {
+  const value = localStorage.getItem(key);
+
+  if (!value) {
+    return null;
+  }
+
+  return JSON.parse(value);
+}
+
+export function getToken() {
+  return getFromStorage(tokenKey);
 }
 
 export function getUsername() {
@@ -24,26 +38,16 @@ export function getUsername() {
   return null;
 }
 
+function removeFromStorage(key, value) {
+  localStorage.removeItem(key, JSON.stringify(value));
+}
+
+export function clearUser(user) {
+  removeFromStorage(userKey, user);
+}
+
 export function clearStorage() {
   localStorage.clear();
-}
-
-export function clearUser() {
-  localStorage.clear(userKey);
-}
-
-function saveToStorage(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
-}
-
-function getFromStorage(key) {
-  const value = localStorage.getItem(key);
-
-  if (!value) {
-    return null;
-  }
-
-  return JSON.parse(value);
 }
 
 export function getCart() {

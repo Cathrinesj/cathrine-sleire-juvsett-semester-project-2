@@ -13,6 +13,7 @@ export default function toggleCart() {
     const id = this.dataset.id;
     const title = this.dataset.title;
     const price = this.dataset.price;
+    const image = this.dataset.image;
 
     const currentCart = getCart();
     const productExist = currentCart.find(function (product) {
@@ -20,7 +21,7 @@ export default function toggleCart() {
     });
 
     if (productExist === undefined) {
-      const cart = { id: id, title: title, price: price };
+      const cart = { id: id, title: title, price: price, image: image };
       currentCart.push(cart);
       saveCart(currentCart);
     } else {
