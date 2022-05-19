@@ -10,11 +10,14 @@ export function renderProductlist(productsToRender) {
   productContainer.innerHTML = "";
 
   productsToRender.forEach(function (product) {
-    productContainer.innerHTML += `<div class="products-item">
+    productContainer.innerHTML += `<div class="col-md-3 products__item border__green">
                                         <img src="${product.image.formats.small.url}"/>
-                                        <h3>${product.title}</h3>
-                                        <h4>${product.price}</h4>
-                                        <a href="product.html?id=${product.id}">View more</a>
+                                        <div class ="link">
+                                          <a href="product.html?id=${product.id}">
+                                            <h3>${product.title} <i class="fa-solid fa-angles-right"></i></h3>
+                                            <h4>NOK ${product.price},-</h4>
+                                          </a>
+                                        </div>  
                                     <div>`;
   });
 }

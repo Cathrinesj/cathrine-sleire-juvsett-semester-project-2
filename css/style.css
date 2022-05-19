@@ -25,8 +25,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-sans-serif: cooper-black-std, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: sofia-pro, sans-serif, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 *,
@@ -49,7 +49,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: cooper-black-std, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -172,7 +172,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: sofia-pro, sans-serif, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -358,19 +358,19 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 2.5rem;
-}
-
-h2, .h2 {
   font-size: 2rem;
 }
 
+h2, .h2 {
+  font-size: 1.5rem;
+}
+
 h3, .h3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 h5, .h5 {
@@ -6532,7 +6532,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: cooper-black-std, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6645,7 +6645,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: cooper-black-std, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -10486,7 +10486,7 @@ button.bg-dark:focus {
 }
 
 .text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-family: sofia-pro, sans-serif, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
 }
 
 .text-justify {
@@ -10796,14 +10796,20 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-:root {
-  --primary-font: cooper-black-std;
-}
-
-h1 {
-  font-family: cooper-black-std, serif;
+h1, h2, .h2, a, h3 {
+  font-family: cooper-black-std, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
+  color: #004133;
+  margin: 20px;
+}
+
+h4, p {
+  font-family: sofia-pro, sans-serif, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-style: normal;
+  font-weight: 100;
+  color: #004133;
+  margin: 20px;
 }
 
 html, body {
@@ -10818,14 +10824,45 @@ img {
   width: 100%;
 }
 
+.sevi__logo {
+  max-width: 120px;
+}
+
 .hero-container {
   border: 4px solid #004133;
   margin: 20px auto;
 }
 
-/*Buttons*/
+.background__primary {
+  background-color: #FBD87B;
+  margin: 20px auto;
+}
+
+.background__light {
+  background-color: #FFF6E1;
+}
+
+.border__green {
+  border: 4px solid #004133;
+}
+
+.row {
+  margin: 20px;
+}
+
+.col-md-3, .col-md-4 {
+  padding: 0px;
+}
+
 button {
   background-color: #37C5E9;
+  border: solid 4px #004133;
+  margin: 20px;
+}
+
+.link {
+  background-color: #37C5E9;
+  border-top: solid 4px #004133;
 }
 
 .cart__button--cart::before, .product__button--cart::before {
@@ -10834,6 +10871,64 @@ button {
 
 .cart__button--cart.added::before, .product__button--cart.added::before {
   content: "Remove";
+}
+
+.nav-link {
+  font-size: 1.5rem;
+}
+
+.navbar {
+  background-color: #F4CDE0;
+}
+
+.navbar-light .navbar-toggler, .navbar-light .navbar-brand {
+  border-color: #004133;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    background-color: transparent;
+  }
+}
+
+footer {
+  display: block;
+  text-align: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.fa-brands {
+  color: #004133;
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  footer i {
+    margin: 2rem 1rem;
+  }
+}
+
+.admin__navbar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .admin__navbar {
+    display: block;
+  }
+  .dropdown {
+    display: none;
+  }
+}
+
+.form {
+  background-color: #FFF6E1;
+  margin: auto;
 }
 
 /*Toggle Switch*/
@@ -10890,24 +10985,51 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-.intro {
-  background-color: #FBD87B;
+@media (min-width: 768px) {
+  .intro__item--img {
+    margin-right: 20px;
+  }
+  .intro__item--text {
+    margin-left: 20px;
+  }
+}
+
+.featured__img {
+  margin: 20px;
+}
+
+.featured__title {
+  margin: 10px;
+}
+
+.products__item {
+  margin: 20px;
+}
+
+.products__search {
+  margin: 20px;
+}
+
+@media (min-width: 768px) {
+  .product__item {
+    margin: 20px;
+  }
+}
+
+.img-thumbnail {
+  max-width: 200px;
   border: 4px solid #004133;
-  margin: 20px auto;
+  margin: 10px auto;
+  padding: 0px;
 }
 
-.intro__item {
-  background-color: #FFF6E1;
-  border: 4px solid #004133;
-  margin: 20px auto;
+.cart__total {
+  margin: 20px;
 }
 
-.products {
-  background-color: yellow;
-}
-
-.products-item {
-  background-color: beige;
+.cart__button--cart {
+  margin: 0px;
+  margin-bottom: 20px;
 }
 
 /*!

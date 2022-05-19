@@ -1,0 +1,19 @@
+footer {
+    display: block;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.fa-brands {
+    color:  $secondary;
+}
+
+@media (min-width: 768px) {
+    footer {
+        display: inline-flex;
+    }
+
+    footer i {
+        margin: 2rem 1rem;
+    }
+}

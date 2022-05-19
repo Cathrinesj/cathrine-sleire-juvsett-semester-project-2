@@ -1,0 +1,18 @@
+button {
+    background-color: $blue;
+    border: solid 4px $secondary;
+    margin: 20px;
+}
+
+.link {
+    background-color: $blue;
+    border-top: solid 4px $secondary;
+}
+
+.cart__button--cart::before, .product__button--cart::before {
+    content: "Add to cart";
+}
+    
+.cart__button--cart.added::before, .product__button--cart.added::before {
+        content: "Remove";
+}

@@ -1,9 +1,15 @@
-:root {
-    --primary-font: cooper-black-std;
-}
-
-h1 {
-    font-family: cooper-black-std, serif;
+h1, h2, .h2, a, h3 {
+    font-family: $font-family-sans-serif;
     font-style: normal;
     font-weight: 400;
+    color:  $secondary;
+    margin: 20px;
+}
+
+h4, p {
+    font-family: $font-family-monospace;
+    font-style: normal;
+    font-weight: 100;
+    color:  $secondary;
+    margin: 20px;
 }

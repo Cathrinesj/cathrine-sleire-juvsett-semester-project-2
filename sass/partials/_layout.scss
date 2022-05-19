@@ -10,21 +10,37 @@ img {
     width: 100%;
 }
 
+.sevi__logo {
+    max-width: 120px;
+}
+
 .hero-container {
     border: 4px solid $secondary;
     margin: 20px auto;
 }
 
-/*Buttons*/
-
-button {
-    background-color: $blue;
+.background__primary {
+    background-color: $primary;
+    margin: 20px auto;
 }
 
-.cart__button--cart::before, .product__button--cart::before {
-    content: "Add to cart";
-    }
-    
-.cart__button--cart.added::before, .product__button--cart.added::before {
-        content: "Remove";
-    }
+.background__light {
+    background-color: $light;
+}
+
+.border__green {
+    border: 4px solid $secondary;
+}
+
+.row {
+    margin: 20px;
+}
+
+.col-md-3, .col-md-4 {
+    padding: 0px;
+}
+
+
+
+
+

@@ -21,10 +21,10 @@ export default function createMenu() {
                 </li>`;
   }
 
-  menuContainer.innerHTML = `<nav class="navbar navbar-expand-lg navbar-light">
+  menuContainer.innerHTML = `<nav class="navbar navbar-expand-md navbar-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">
-        <img href="resources/logo/HeroSeviLogo.svg"/>
+    <a class="navbar-brand sevi__logo" href="index.html">
+        <img src="resources/logo/HeroSeviLogo.svg"/>
     </a>
     <button
       class="navbar-toggler"
@@ -53,7 +53,8 @@ export default function createMenu() {
         <li class="nav-item">
           <a href="/cart.html" class="nav-link ${
             pathname === "/cart.html" ? "active" : ""
-          }"><i class="fa-solid fa-bag-shopping"></i>Cart</a>
+          }">Cart
+          </a>
         </li>
       </ul>
     </div>

@@ -1,0 +1,17 @@
+.nav-link {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    background-color: #F4CDE0 ;
+}
+
+.navbar-light .navbar-toggler, .navbar-light .navbar-brand {
+    border-color: $secondary;
+}
+
+@media (min-width: 768px) {
+.navbar {
+    background-color: transparent;
+}
+}

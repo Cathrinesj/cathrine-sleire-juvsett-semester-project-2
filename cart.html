@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
     <link href="css/style.css" rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/2661e0888f.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/vjm5aie.css" />
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <div class="container">
       <div class="menu-container"></div>
       <section class="hero-container"></section>
       <section>
-        <div class="row justify-content-center cart"></div>
-        <div class="cart__total"></div>
+        <div class="background__primary border__green">
+          <div class="row justify-content-center cart"></div>
+          <div class="cart__total background__light border__green">
+            <div class="cart__total--sum"></div>
+          </div>
+        </div>
       </section>
-      <footer>
-        <p>©️Feminite</p>
-        <p>Follow us:</p>
+      <footer class="my-auto justify-content-center">
+        <h2>©️Feminite</h2>
+        <h2>Follow us:</h2>
+        <i class="fa-brands fa-facebook-square fa-2xl"></i>
+        <i class="fa-brands fa-instagram-square fa-2xl"></i>
+        <i class="fa-brands fa-snapchat-square fa-2xl"></i>
       </footer>
     </div>
     <script

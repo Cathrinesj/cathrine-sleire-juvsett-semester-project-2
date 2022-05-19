@@ -44,8 +44,8 @@ async function doLogin(username, password) {
     const json = await response.json();
 
     if (json.user) {
-      savetoken(json.jwt);
-      saveUser(json.user);
+      savetoken("token", data.jwt);
+      saveUser("user", JSON.stringify(data.user));
 
       location.href = "/add.html";
     }

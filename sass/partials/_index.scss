@@ -1,11 +1,28 @@
-.intro {
-    background-color: $primary;
-    border: 4px solid $secondary;
-    margin: 20px auto;
+@media (min-width: 768px) {
+    .intro {
 
-    &__item {
-        background-color: $light;
-        border: 4px solid $secondary;
-        margin: 20px auto;
+        &__item {
+    
+            &--img {
+                margin-right: 20px;
+            }
+    
+            &--text {
+                margin-left: 20px;
+            }
+        }
+    }
+
+}
+
+.featured {
+
+    &__img {
+        margin: 20px;
+    }
+
+    &__title {
+        margin: 10px;
     }
 }
+

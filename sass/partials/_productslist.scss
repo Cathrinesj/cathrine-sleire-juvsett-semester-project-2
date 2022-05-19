@@ -1,7 +1,11 @@
 .products {
-    background-color: $primary;
+    
+   &__item {
+       margin: 20px;
+   }
 
-    &__item {
-        background-color: $light;
+   &__search {
+       margin: 20px;
     }
 }
+

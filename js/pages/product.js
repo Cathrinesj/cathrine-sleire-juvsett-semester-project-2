@@ -4,6 +4,7 @@ import toggleCart from "../components/buttons/cartButton.js";
 import displaymessage from "../components/common/displayMessage.js";
 import createMenu from "../components/common/createMenu.js";
 import heroImage from "../components/common/heroImage.js";
+import { getFeaturedProducts } from "../products/featuredProducts.js";
 
 createMenu();
 heroImage();
@@ -31,3 +32,5 @@ async function fetchProduct() {
 }
 
 fetchProduct();
+
+getFeaturedProducts();

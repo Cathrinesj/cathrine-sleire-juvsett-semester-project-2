@@ -41,12 +41,14 @@
 @import "partials/custom";
 @import "partials/typography";
 @import "partials/layout";
+@import "partials/buttons";
+@import "partials/nav";
+@import "partials/footer";
 @import "partials/admin";
 @import "partials/index";
-@import "partials/login";
-@import "partials/nav";
-@import "partials/product";
 @import "partials/productslist";
+@import "partials/product";
+@import "partials/cart";
 
 @import "../fontawesome-scss/sass/fontawesome";
 @import "../fontawesome-scss/sass/brands";

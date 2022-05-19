@@ -1,0 +1,21 @@
+.img-thumbnail {
+    max-width: 200px;
+    border: 4px solid $secondary;
+    margin: 10px auto;
+    padding: 0px;
+}
+
+.cart {
+
+    &__total {
+        margin: 20px;
+    }
+
+    &__button {
+        &--cart{
+            margin: 0px;
+            margin-bottom: 20px;
+        }
+    }
+    
+}
