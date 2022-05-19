@@ -10926,9 +10926,24 @@ footer {
   }
 }
 
-.form {
-  background-color: #FFF6E1;
+.admin-menu .navbar {
+  background-color: #FBD87B;
+}
+
+.dropdown-toggle {
   margin: auto;
+  background-color: #37C5E9;
+  border: solid 4px #004133;
+  color: #004133;
+}
+
+.form {
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+form input {
+  max-width: 300px;
 }
 
 /*Toggle Switch*/

@@ -1,6 +1,8 @@
 import { getCart, getUsername } from "../tools/storage/storage.js";
 
 export function renderProduct(product) {
+  document.title = `SeVi | ${product.title}`;
+
   const inCart = getCart();
 
   const productContainer = document.querySelector(".product");
@@ -22,7 +24,7 @@ export function renderProduct(product) {
   let loggedIn = ``;
 
   if (username) {
-    loggedIn = `<button class = "">
+    loggedIn = `<button>
                              <a href= "edit.html?id=${product.id}" class = "">Edit item </a>
                           </button>`;
   }
@@ -31,8 +33,8 @@ export function renderProduct(product) {
                                         <img src="${product.image.formats.small.url}"/>
                                     </div>
                                     <div class="col-md-6 product__item border__green background__light">         
-                                        <h3>${product.title}</h3>
-                                        <h4>NOK ${product.price},-</h4>
+                                        <h1>${product.title}</h1>
+                                        <h2>NOK ${product.price},-</h2>
                                         <p>${product.description}</p>
                                         <button class="product__button--cart ${cartClass}" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="${product.image.formats.small.url}"></button>
                                         ${loggedIn}

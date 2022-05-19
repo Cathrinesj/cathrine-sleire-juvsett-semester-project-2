@@ -5,7 +5,7 @@ export default function adminMenu() {
 
   const menuContainer = document.querySelector(".admin-menu");
 
-  menuContainer.innerHTML = `<nav class="navbar navbar-expand-md navbar-light border__green background__primary">
+  menuContainer.innerHTML = `<nav class="navbar navbar-expand-md navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">
         <img href="resources/logo/HeroSeviLogo.svg"/>

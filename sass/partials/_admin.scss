@@ -12,9 +12,24 @@
     }
 }
 
-.form {
-    background-color: $light;
+.admin-menu .navbar {
+    background-color: $primary;
+}
+
+.dropdown-toggle {
     margin: auto;
+    background-color: $blue;
+    border: solid 4px $secondary;
+    color: $secondary
+}
+
+.form {
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+form input {
+    max-width: 300px;
 }
 
 /*Toggle Switch*/ 
