@@ -28,6 +28,7 @@ const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const image = document.querySelector("#image");
+const featured = document.querySelector("#featured");
 const message = document.querySelector(".message-container");
 const idInput = document.querySelector("#id");
 
@@ -56,10 +57,14 @@ function submitForm(event) {
 
   message.innerHTML = "";
 
+  if (featured.checked === true) return true;
+  if (featured.checked !== true) return false;
+
   const titleValue = title.value.trim();
   const priceValue = price.value.trim();
   const descriptionValue = description.value.trim();
   const imageValue = image.value.trim();
+  const featuredValue = featured;
   const idValue = idInput.value;
 
   if (
@@ -69,20 +74,28 @@ function submitForm(event) {
   ) {
     return displayMessage(
       "warning",
-      "please fill out all inputs",
+      "Please fill out all inputs",
       ".message-container"
     );
   }
 
-  editProduct(titleValue, priceValue, descriptionValue, imageValue, idValue);
+  editProduct(
+    titleValue,
+    priceValue,
+    descriptionValue,
+    imageValue,
+    featuredValue,
+    idValue
+  );
 }
 
-async function editProduct(title, price, description, image, id) {
+async function editProduct(title, price, description, image, featured) {
   const data = JSON.stringify({
     title: title,
     price: price,
     description: description,
     image_url: image,
+    featured: featured,
   });
 
   const token = getToken();
@@ -101,7 +114,7 @@ async function editProduct(title, price, description, image, id) {
     const json = await response.json();
 
     if (json.updated_at) {
-      displayMessage("success", "Product is added", ".message-container");
+      displayMessage("success", "Product is updated", ".message-container");
     }
 
     if (json.error) {

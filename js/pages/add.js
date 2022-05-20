@@ -40,7 +40,7 @@ function submitForm(event) {
   ) {
     return displayMessage(
       "warning",
-      "please fill out all inputs",
+      "Please fill out all inputs",
       ".message-container"
     );
   }

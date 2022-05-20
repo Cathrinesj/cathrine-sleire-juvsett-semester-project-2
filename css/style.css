@@ -10856,6 +10856,29 @@ section {
   padding: 0px;
 }
 
+/*Messages*/
+.message-container {
+  margin-bottom: 20px;
+}
+
+.message.success {
+  background-color: #FFF6E1;
+  border: 4px solid #004133;
+  color: #004133;
+}
+
+.message.warning {
+  background-color: #FFF6E1;
+  border: 4px solid #004133;
+  color: #004133;
+}
+
+.message.error {
+  background-color: #FFF6E1;
+  border: 4px solid #004133;
+  color: red;
+}
+
 button {
   background-color: #37C5E9;
   border: solid 4px #004133;
@@ -10951,6 +10974,8 @@ button {
 
 .navbar-light .navbar-toggler, .navbar-light .navbar-brand {
   border-color: #004133;
+  color: #004133;
+  font-family: cooper-black-std, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @media (min-width: 768px) {
@@ -11011,6 +11036,7 @@ footer {
   position: relative;
   display: inline-block;
   border-radius: 34px;
+  margin: 20px;
   width: 60px;
   height: 34px;
 }
@@ -11028,7 +11054,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #37C5E9;
+  background-color: #FFF6E1;
   border: 2px solid #004133;
   -webkit-transition: .4s;
   transition: .4s;
@@ -11038,7 +11064,7 @@ footer {
   position: absolute;
   content: "";
   border-radius: 50%;
-  height: 26px;
+  height: 24px;
   width: 26px;
   left: 4px;
   bottom: 4px;
@@ -11107,6 +11133,10 @@ input:checked + .slider:before {
 .cart__button--cart {
   margin: 0px;
   margin-bottom: 20px;
+}
+
+.cart__total--sum {
+  padding-left: 50%;
 }
 
 /*!

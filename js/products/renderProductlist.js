@@ -1,5 +1,3 @@
-import displaymessage from "../components/common/displayMessage.js";
-
 export function renderProductlist(productsToRender) {
   const productContainer = document.querySelector(".products");
   const loaderContainer = document.querySelector(".loader");
@@ -8,7 +6,7 @@ export function renderProductlist(productsToRender) {
   loaderContainer.innerHTML = "";
 
   if (productsToRender.length === 0) {
-    return displaymessage("warning", "No items for this search", ".products");
+    productContainer.innerHTML += `<h2>No items for this search</h2>`;
   }
 
   productsToRender.forEach(function (product) {

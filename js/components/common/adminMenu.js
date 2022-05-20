@@ -7,7 +7,7 @@ export default function adminMenu() {
 
   menuContainer.innerHTML = `
   <nav class="navbar navbar-expand-sm navbar-light">
-    <div class="container-fluid">
+    <div class="container-fluid background__light border__green">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a href= "/add.html" class = "nav-link" ${

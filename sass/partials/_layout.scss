@@ -42,6 +42,33 @@ section {
     padding: 0px;
 }
 
+/*Messages*/
+
+.message-container {
+    margin-bottom: 20px;
+}
+
+.message.success {
+    background-color: $light; 
+    border: 4px solid $secondary;
+    color: $secondary;
+    
+}
+
+.message.warning {
+    background-color: $light; 
+    border: 4px solid $secondary;
+    color: $secondary;
+    
+}
+
+.message.error {
+    background-color: $light; 
+    border: 4px solid $secondary;
+    color: red;
+    
+}
+
 
 
 

@@ -60,10 +60,12 @@ function totalCart() {
   const totalCost = cost.toFixed(2);
 
   const cartTotal = document.querySelector(".cart__total--sum");
+  const cartMessage = document.querySelector(".cart__message");
 
-  cartTotal.innerHTML = "TOTAL NOK" + totalCost + ",-";
+  cartTotal.innerHTML = `<h3>Total NOK ${totalCost} ,-</h3>`;
 
   if (products.length === 0) {
-    cartTotal.innerHTML = `<h2>No items in cart yet</h2>`;
+    cartTotal.innerHTML = "";
+    cartMessage.innerHTML = `<h2>No items in cart</h2>`;
   }
 }
