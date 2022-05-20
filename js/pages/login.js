@@ -1,5 +1,5 @@
 import displaymessage from "../components/common/displayMessage.js";
-import { savetoken, saveUser } from "../tools/storage/storage.js";
+import { saveToken, saveUser } from "../tools/storage/storage.js";
 import { baseUrl } from "../tools/data/api.js";
 import createMenu from "../components/common/createMenu.js";
 
@@ -44,8 +44,8 @@ async function doLogin(username, password) {
     const json = await response.json();
 
     if (json.user) {
-      savetoken("token", data.jwt);
-      saveUser("user", JSON.stringify(data.username));
+      saveToken(json.jwt);
+      saveUser(json.user);
 
       location.href = "/add.html";
     }

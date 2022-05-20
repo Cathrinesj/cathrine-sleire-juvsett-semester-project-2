@@ -6,80 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin | Edit</title>
     <link href="css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.typekit.net/vjm5aie.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vjm5aie.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
     <div class="container">
-      <div class="menu-container"></div>
-      <div class="admin-menu border__green background__primary"></div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-6 col-lg-5 border__green background__primary">
-          <h1>Edit product</h1>
-          <form>
-            <div class="message-container"></div>
+      <section class="menu-container"></section>
+      <section class="admin-menu border__green background__primary"></section>
+      <section class="background__primary border__green">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 form">
+            <h1>Edit product</h1>
+            <div class="background__light border__green">
+              <form class="form">
+                <div class="message-container"></div>
 
-            <div class="mb-3">
-              <label for="title" class="form-label">Title</label>
-              <input
-                type="text"
-                class="form-control"
-                id="title"
-                placeholder="title"
-              />
+                <div class="input-group mb-4">
+                  <label for="title" class="input-group-text col-lg-2"
+                    >Title</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control col-lg-10"
+                    id="title"
+                    placeholder="title"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <label for="price" class="input-group-text col-lg-2"
+                    >Price</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control col-lg-10"
+                    id="price"
+                    placeholder="price"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <label for="description" class="input-group-text col-lg-2"
+                    >Description</label
+                  >
+                  <textarea
+                    type="text"
+                    class="form-control col-lg-10"
+                    id="description"
+                    placeholder="description"
+                    rows="5"
+                  >
+                  </textarea>
+                </div>
+                <div class="input-group mb-3">
+                  <label for="image" class="input-group-text col-lg-2"
+                    >Image url</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control col-lg-10"
+                    id="image"
+                    placeholder="image"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <h3>Featured</h3>
+                  <label for="featured" class="toggler">
+                    <input
+                      type="checkbox"
+                      class="form-control"
+                      id="featured"
+                      placeholder="featured" />
+                    <span class="slider"></span
+                  ></label>
+                </div>
+                <input id="id" type="hidden" />
+                <div class="form__buttons">
+                  <div class="delete-container"></div>
+                  <button>Save</button>
+                </div>
+              </form>
             </div>
-            <div class="mb-3">
-              <label for="price" class="form-label">Price</label>
-              <input
-                type="number"
-                class="form-control"
-                id="price"
-                placeholder="price"
-            />
-            </div>
-            <div class="mb-3">
-              <label for="description" class="form-label">Description</label>
-              <input
-                type="text"
-                class="form-control"
-                id="description"
-                placeholder="description"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="image" class="form-label">Upload Image</label>
-              <input
-                type="file"
-                class="form-control"
-                id="image"
-                placeholder="image"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="featured" class="form-label toggler"
-                >Featured
-                <input
-                  type="checkbox"
-                  class="form-control"
-                  id="featured"
-                  placeholder="featured" />
-                <span class="slider"></span
-              ></label>
-            </div>
-            <input id="id" type="hidden"/> 
-            <button>Save</button>
-            </hr>
-            <div class="delete-container"></div>
-          </form>
+          </div>
         </div>
-      </div>
-      <footer class="my-auto justify-content-center">
-        <h2>©️Feminite</h2>
-        <h2>Follow us:</h2>
-        <i class="fa-brands fa-facebook-square fa-2xl"></i>
-        <i class="fa-brands fa-instagram-square fa-2xl"></i>
-        <i class="fa-brands fa-snapchat-square fa-2xl"></i>
-      </footer>
+      </section>
     </div>
+    <footer class="my-auto justify-content-center">
+      <h2>©️Feminite</h2>
+      <h2>Follow us:</h2>
+      <i class="fa-brands fa-facebook-square fa-2xl"></i>
+      <i class="fa-brands fa-instagram-square fa-2xl"></i>
+      <i class="fa-brands fa-snapchat-square fa-2xl"></i>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

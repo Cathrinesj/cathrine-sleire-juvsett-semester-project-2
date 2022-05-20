@@ -9,14 +9,14 @@ export async function getFeaturedProducts() {
     const products = await response.json();
 
     const featuredContainer = document.querySelector(".featured");
+    const loaderContainer = document.querySelector(".loader");
 
-    featuredContainer.innerHTML = "";
+    loaderContainer.innerHTML = "";
 
     products.forEach(function (featured) {
-      console.log(featured.image.formats.small.url);
       if (featured.featured === true) {
         featuredContainer.innerHTML += `<div class="col-md-3 featured__img border__green">
-                                          <img src="${featured.image.formats.small.url}"/>
+                                          <img src="${featured.image_url}"/>
                                           <div class="link">
                                             <a href="product.html?id=${featured.id}">
                                             <h3 class="featured__title">${featured.title} <i class="fa-solid fa-angles-right"></i></h3>

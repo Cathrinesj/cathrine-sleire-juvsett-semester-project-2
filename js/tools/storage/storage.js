@@ -6,7 +6,7 @@ function saveToStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
-export function savetoken(token) {
+export function saveToken(token) {
   saveToStorage(tokenKey, token);
 }
 

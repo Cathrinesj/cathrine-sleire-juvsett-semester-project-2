@@ -2,34 +2,25 @@
     display: none;
 }
 
-@media (min-width: 768px) {
-    .admin__navbar {
-        display: block;
-    }
-
-    .dropdown {
-        display: none;
-    }
-}
-
 .admin-menu .navbar {
     background-color: $primary;
 }
 
-.dropdown-toggle {
-    margin: auto;
-    background-color: $blue;
-    border: solid 4px $secondary;
-    color: $secondary
-}
+/*Form*/
 
 .form {
     margin-bottom: 40px;
     padding: 10px;
+
+    &__buttons {
+        display: inline-flex;
+    }
 }
 
-form input {
-    max-width: 300px;
+.input-group-text, .form-control {
+    color: $secondary;
+    border: 2px solid $secondary;
+
 }
 
 /*Toggle Switch*/ 
@@ -55,7 +46,8 @@ form input {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: $blue;
+    border: 2px solid $secondary;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -68,7 +60,7 @@ form input {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: $secondary;
     -webkit-transition: .4s;
     transition: .4s;
 }

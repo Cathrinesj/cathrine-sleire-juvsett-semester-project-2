@@ -64,6 +64,6 @@ function totalCart() {
   cartTotal.innerHTML = "TOTAL NOK" + totalCost + ",-";
 
   if (products.length === 0) {
-    cartTotal.innerHTML = "No items in cart yet";
+    cartTotal.innerHTML = `<h2>No items in cart yet</h2>`;
   }
 }

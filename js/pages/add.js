@@ -1,7 +1,8 @@
 import { getToken } from "../tools/storage/storage.js";
 import createMenu from "../components/common/createMenu.js";
 import adminMenu from "../components/common/adminMenu.js";
-import { addProduct } from "../forms/addProduct.js";
+import { baseUrl } from "../tools/data/api.js";
+import displayMessage from "../components/common/displayMessage.js";
 
 const token = getToken();
 
@@ -9,22 +10,9 @@ if (!token) {
   location.href = "/login.html";
 }
 
-async function addTheProduct() {
-  createMenu();
-  adminMenu();
+createMenu();
+adminMenu();
 
-  const createForm = document.querySelector("form#create");
-
-  if (createForm) {
-    createForm.addEventListener("submit", addProduct);
-  }
-}
-
-addTheProduct();
-
-/*
-import { baseUrl } from "../tools/data/api.js";
-import displayMessage from "../components/common/displayMessage.js";
 const form = document.querySelector("form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
@@ -67,7 +55,8 @@ async function addProduct(title, price, description, image) {
     title: title,
     price: price,
     description: description,
-    image: image.url,
+    image_url: image,
+    featured: featured,
   });
 
   const options = {
@@ -94,4 +83,4 @@ async function addProduct(title, price, description, image) {
     console.log(error);
     displayMessage("error", "An error occured", ".message-container");
   }
-}*/
+}

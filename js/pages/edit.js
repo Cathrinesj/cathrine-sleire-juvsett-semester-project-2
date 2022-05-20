@@ -39,7 +39,7 @@ const idInput = document.querySelector("#id");
     title.value = details.title;
     price.value = details.price;
     description.value = details.description;
-    image.value = details.image;
+    image.value = details.image_url;
 
     deleteButton(details.id);
   } catch (error) {
@@ -65,8 +65,7 @@ function submitForm(event) {
   if (
     titleValue.length === 0 ||
     priceValue.length === 0 ||
-    descriptionValue.length === 0 ||
-    imageValue.length === 0
+    descriptionValue.length === 0
   ) {
     return displayMessage(
       "warning",
@@ -79,13 +78,11 @@ function submitForm(event) {
 }
 
 async function editProduct(title, price, description, image, id) {
-  const url = baseUrl + "products" + id;
-
   const data = JSON.stringify({
     title: title,
     price: price,
     description: description,
-    image: image.url,
+    image_url: image,
   });
 
   const token = getToken();
@@ -94,7 +91,7 @@ async function editProduct(title, price, description, image, id) {
     method: "PUT",
     body: data,
     headers: {
-      "content-Type": "application/json",
+      "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
   };

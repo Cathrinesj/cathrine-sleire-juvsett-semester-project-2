@@ -16,12 +16,14 @@ img {
 
 .hero-container {
     border: 4px solid $secondary;
+}
+
+section {
     margin: 20px auto;
 }
 
 .background__primary {
     background-color: $primary;
-    margin: 20px auto;
 }
 
 .background__light {
@@ -39,6 +41,8 @@ img {
 .col-md-3, .col-md-4 {
     padding: 0px;
 }
+
+
 
 
 
