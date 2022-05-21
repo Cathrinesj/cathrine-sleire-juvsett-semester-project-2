@@ -31,13 +31,13 @@ export function renderProduct(product) {
   }
 
   productContainer.innerHTML += `<div class="col-md-4 product__item product__item--img border__green">
-                                        <img src="${product.image_url}"/>
+                                        <img src="${product.image_url}" alt="${product.image.alternativeText}"/>
                                     </div>
                                     <div class="col-md-6 product__item border__green background__light">         
                                         <h1>${product.title}</h1>
                                         <h2>NOK ${product.price},-</h2>
                                         <p>${product.description}</p>
-                                        <button class="product__button--cart ${cartClass}" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="${product.image_url}"></button>
+                                        <button class="product__button--cart ${cartClass}" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="${product.image_url}" data-alt="${product.image.alternativeText}"></button>
                                         ${loggedIn}
                                   </div>`;
 }
