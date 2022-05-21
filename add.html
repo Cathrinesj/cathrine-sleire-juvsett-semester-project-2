@@ -63,7 +63,7 @@
                     type="text"
                     class="form-control col-lg-10"
                     id="image"
-                    placeholder="image"
+                    placeholder="image url"
                   />
                 </div>
                 <div class="input-group mb-3">
@@ -73,7 +73,8 @@
                       type="checkbox"
                       class="form-control"
                       id="featured"
-                      placeholder="featured" />
+                      value=""
+                      onclick="isChecked(this)" />
                     <span class="slider"></span
                   ></label>
                 </div>
@@ -102,5 +103,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/pages/add.js" type="module"></script>
+    <script src="js/components/common/formToggler.js"></script>
   </body>
 </html>

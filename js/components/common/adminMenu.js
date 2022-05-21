@@ -10,9 +10,9 @@ export default function adminMenu() {
     <div class="container-fluid background__light border__green">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href= "/add.html" class = "nav-link" ${
-              pathname === "/" || pathname === "/add.html" ? "active" : ""
-            }>Add Product</a>
+          <a href="/add.html" class="nav-link ${
+            pathname === "/add.html" ? "active" : ""
+          }">Add Product</a>
           </li>
           <li class="nav-item">
             <a href="/edit.html" class="nav-link ${

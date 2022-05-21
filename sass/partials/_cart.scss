@@ -5,23 +5,39 @@
     padding: 0px;
 }
 
+.cart .row {
+    margin: 10px 0px;
+}
+
 .cart {
+
+    &__link {
+        text-decoration: underline;
+    } 
 
     &__total {
         margin: 20px;
     }
+    
 
     &__button {
         &--cart{
             margin: 0px;
             margin-bottom: 20px;
         }
-    }
+    } 
+}
 
-    &__total {
-        &--sum{
-            padding-left: 50%;
+@media (min-width: 768px) {
+    .cart {
+        &__total {
+            
+            &--sum{
+                padding-left: 50%;
+            }
         }
     }
-    
 }
+        
+    
+      

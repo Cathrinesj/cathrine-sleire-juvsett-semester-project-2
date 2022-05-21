@@ -18,6 +18,7 @@ const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const image = document.querySelector("#image");
+const featured = document.querySelector("#featured");
 const message = document.querySelector(".message-container");
 
 form.addEventListener("submit", submitForm);
@@ -31,6 +32,7 @@ function submitForm(event) {
   const priceValue = price.value.trim();
   const descriptionValue = description.value.trim();
   const imageValue = image.value.trim();
+  const featuredValue = featured;
 
   if (
     titleValue.length === 0 ||
@@ -45,10 +47,16 @@ function submitForm(event) {
     );
   }
 
-  addProduct(titleValue, priceValue, descriptionValue, imageValue);
+  addProduct(
+    titleValue,
+    priceValue,
+    descriptionValue,
+    imageValue,
+    featuredValue
+  );
 }
 
-async function addProduct(title, price, description, image) {
+async function addProduct(title, price, description, image, featured) {
   const url = baseUrl + "products";
 
   const data = JSON.stringify({
@@ -56,6 +64,7 @@ async function addProduct(title, price, description, image) {
     price: price,
     description: description,
     image_url: image,
+    featured: featured.value,
   });
 
   const options = {

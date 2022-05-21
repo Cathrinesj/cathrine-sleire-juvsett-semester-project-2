@@ -28,6 +28,7 @@ const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const image = document.querySelector("#image");
+const featured = document.querySelector("#featured");
 const message = document.querySelector(".message-container");
 const idInput = document.querySelector("#id");
 
@@ -40,6 +41,7 @@ const idInput = document.querySelector("#id");
     price.value = details.price;
     description.value = details.description;
     image.value = details.image_url;
+    featured.value = details.featured;
 
     deleteButton(details.id);
   } catch (error) {
@@ -60,12 +62,15 @@ function submitForm(event) {
   const priceValue = price.value.trim();
   const descriptionValue = description.value.trim();
   const imageValue = image.value.trim();
+  const featuredValue = featured.value;
+
   const idValue = idInput.value;
 
   if (
     titleValue.length === 0 ||
     priceValue.length === 0 ||
-    descriptionValue.length === 0
+    descriptionValue.length === 0 ||
+    imageValue.length === 0
   ) {
     return displayMessage(
       "warning",
@@ -74,7 +79,14 @@ function submitForm(event) {
     );
   }
 
-  editProduct(titleValue, priceValue, descriptionValue, imageValue, idValue);
+  editProduct(
+    titleValue,
+    priceValue,
+    descriptionValue,
+    imageValue,
+    idValue,
+    featuredValue
+  );
 }
 
 async function editProduct(title, price, description, image) {
@@ -83,6 +95,7 @@ async function editProduct(title, price, description, image) {
     price: price,
     description: description,
     image_url: image,
+    featured: featured.value,
   });
 
   const token = getToken();

@@ -15,7 +15,7 @@ export function renderCart() {
                                     </div>
                                     <div class="col-md-6"> 
                                       <a href="product.html?id=${cart.id}">
-                                        <h3>${cart.title}</h3>
+                                        <h2>${cart.title}</h2>
                                         <h3 class="cart__price">${cart.price}</h3>  
                                       </a>  
                                       <button class="cart__button--cart added" data-id="${cart.id}" data-title="${cart.title}" data-price="${cart.price}" data-image="${cart.image}"></button>

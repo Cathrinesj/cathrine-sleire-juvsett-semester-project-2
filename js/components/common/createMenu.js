@@ -24,7 +24,7 @@ export default function createMenu() {
   menuContainer.innerHTML = `<nav class="navbar navbar-expand-md navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand sevi__logo" href="index.html">
-        <img src="resources/logo/HeroSeviLogo.svg"/>
+        <img src="resources/logo/HeroSeviLogo.svg" alt="Sevi logo - a clothing hanger and the SeVi name below"/>
     </a>
     <button
       class="navbar-toggler"
