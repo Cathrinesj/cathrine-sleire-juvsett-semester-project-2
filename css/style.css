@@ -10861,22 +10861,10 @@ section {
   margin-bottom: 20px;
 }
 
-.message.success {
-  background-color: #FFF6E1;
+.message.success, .message.warning, .message.error {
+  background-color: #FBD87B;
   border: 4px solid #004133;
   color: #004133;
-}
-
-.message.warning {
-  background-color: #FFF6E1;
-  border: 4px solid #004133;
-  color: #004133;
-}
-
-.message.error {
-  background-color: #FFF6E1;
-  border: 4px solid #004133;
-  color: red;
 }
 
 button {
@@ -10916,7 +10904,6 @@ button {
   height: var(--item-size);
   display: inline-block;
   margin: 10 10px;
-  border-radius: 50%;
   border: 8px solid var(--clr-spinner);
   -webkit-animation: loader var(--animation-duration) ease-in-out infinite;
           animation: loader var(--animation-duration) ease-in-out infinite;
@@ -10947,6 +10934,7 @@ button {
 }
 
 .loader__item--1 {
+  border-radius: 50%;
   --clr-spinner: var(--clr1);
   -webkit-animation-delay: calc(var(--animation-duration) / 6 * -1);
           animation-delay: calc(var(--animation-duration) / 6 * -1);
@@ -10959,6 +10947,7 @@ button {
 }
 
 .loader__item--3 {
+  border-radius: 50%;
   --clr-spinner: var(--clr3);
   -webkit-animation-delay: calc(var(--animation-duration) / 6 * -3);
           animation-delay: calc(var(--animation-duration) / 6 * -3);
