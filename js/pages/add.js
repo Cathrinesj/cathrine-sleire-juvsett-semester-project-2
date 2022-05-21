@@ -56,7 +56,6 @@ async function addProduct(title, price, description, image) {
     price: price,
     description: description,
     image_url: image,
-    featured: featured,
   });
 
   const options = {

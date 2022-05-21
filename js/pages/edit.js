@@ -28,7 +28,6 @@ const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const image = document.querySelector("#image");
-const featured = document.querySelector("#featured");
 const message = document.querySelector(".message-container");
 const idInput = document.querySelector("#id");
 
@@ -57,14 +56,10 @@ function submitForm(event) {
 
   message.innerHTML = "";
 
-  if (featured.checked === true) return true;
-  if (featured.checked !== true) return false;
-
   const titleValue = title.value.trim();
   const priceValue = price.value.trim();
   const descriptionValue = description.value.trim();
   const imageValue = image.value.trim();
-  const featuredValue = featured;
   const idValue = idInput.value;
 
   if (
@@ -79,23 +74,15 @@ function submitForm(event) {
     );
   }
 
-  editProduct(
-    titleValue,
-    priceValue,
-    descriptionValue,
-    imageValue,
-    featuredValue,
-    idValue
-  );
+  editProduct(titleValue, priceValue, descriptionValue, imageValue, idValue);
 }
 
-async function editProduct(title, price, description, image, featured) {
+async function editProduct(title, price, description, image) {
   const data = JSON.stringify({
     title: title,
     price: price,
     description: description,
     image_url: image,
-    featured: featured,
   });
 
   const token = getToken();
