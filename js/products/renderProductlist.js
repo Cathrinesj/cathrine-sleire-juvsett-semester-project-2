@@ -11,7 +11,7 @@ export function renderProductlist(productsToRender) {
 
   productsToRender.forEach(function (product) {
     productContainer.innerHTML += `<div class="col-md-3 products__item border__green">
-                                        <img src="${product.image_url}" alt="${product.image.alternativeText}"/>
+                                        <img src="${product.image_url}"/>
                                         <div class ="link">
                                           <a href="product.html?id=${product.id}">
                                             <h3>${product.title} <i class="fa-solid fa-angles-right"></i></h3>

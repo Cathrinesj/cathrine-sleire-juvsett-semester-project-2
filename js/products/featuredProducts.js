@@ -16,13 +16,13 @@ export async function getFeaturedProducts() {
     products.forEach(function (featured) {
       if (featured.featured === true) {
         featuredContainer.innerHTML += `<div class="col-md-3 featured__img border__green">
-                                          <img src="${featured.image_url}" alt="${featured.image.alternativeText}"/>
+                                          <img src="${featured.image_url}"/>
                                           <div class="link">
                                             <a href="product.html?id=${featured.id}">
                                             <h3 class="featured__title">${featured.title} <i class="fa-solid fa-angles-right"></i></h3>
                                             </a>
                                           </div
-                                      </div>`;
+                                        </div>`;
       }
     });
 

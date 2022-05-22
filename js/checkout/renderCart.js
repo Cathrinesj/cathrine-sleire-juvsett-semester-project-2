@@ -14,7 +14,7 @@ export function renderCart() {
                                       <img src="${cart.image}" class="img-thumbnail"/> 
                                     </div>
                                     <div class="col-md-6"> 
-                                      <a href="product.html?id=${cart.id}">
+                                      <a href="product.html?id=${cart.id}" class="cart__link">
                                         <h2>${cart.title}</h2>
                                         <h3 class="cart__price">${cart.price}</h3>  
                                       </a>  

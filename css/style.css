@@ -11093,6 +11093,10 @@ input:checked + .slider:before {
   margin: 10px;
 }
 
+.search {
+  border-radius: 0px;
+}
+
 .products__item {
   margin: 20px;
   background-color: #37C5E9;
