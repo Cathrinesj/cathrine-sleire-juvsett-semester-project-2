@@ -14,6 +14,7 @@ Build a front end with home, product list, product detail and cart pages. Checko
 ## Set up and run locally
 
 You can install by cloning this repo
+
 Use Go Live extension in VS code to run locally
 
 Testing Admin access:
