@@ -17,8 +17,9 @@ You can install by cloning this repo
 Use Go Live extension in VS code to run locally
 
 Testing Admin access:
-admin@admin.com
-Admin2022
+
+-admin@admin.com
+-Admin2022
 
 ## How to use the app
 
